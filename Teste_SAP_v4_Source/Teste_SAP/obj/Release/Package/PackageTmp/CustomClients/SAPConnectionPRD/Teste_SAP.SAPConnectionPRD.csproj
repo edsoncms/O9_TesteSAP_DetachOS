@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB90915D-C865-2382-FDBA-F12AA99CBBA7}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ssTeste_SAP</RootNamespace>
+    <AssemblyName>Teste_SAP.CcSAPConnectionPRD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\..\OutSystems.RuntimeCommon\OutSystems.RuntimeCommon.csproj">
+      <Project>{A99F44D3-9D76-4AA1-A833-BA2D283AD22E}</Project>
+      <Name>OutSystems.RuntimeCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RuntimePlatform\RuntimePlatform.csproj">
+      <Project>{EFB0D1E3-076D-4F16-A595-B33BFC5B3F18}</Project>
+      <Name>RuntimePlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DatabaseAbstractionLayer\DatabaseAbstractionLayer.csproj">
+      <Project>{E451FEC9-2B6B-45A2-8AB9-57196F4557E8}</Project>
+      <Name>DatabaseAbstractionLayer</Name>
+    </ProjectReference>
+    <Reference Include="lib\sapnco.dll, ">
+      <Name>lib\sapnco.dll</Name>
+      <HintPath>lib\sapnco.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="lib\sapnco_utils.dll, ">
+      <Name>lib\sapnco_utils.dll</Name>
+      <HintPath>lib\sapnco_utils.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="lib\SapNcoConnectionManager.dll">
+      <Name>lib\SapNcoConnectionManager.dll</Name>
+      <HintPath>lib\SapNcoConnectionManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="lib\OutSystems.SAP.API.dll">
+      <Name>lib\OutSystems.SAP.API.dll</Name>
+      <HintPath>lib\OutSystems.SAP.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="lib\OutSystems.Plugin.SAP.Runtime.dll">
+      <Name>lib\OutSystems.Plugin.SAP.Runtime.dll</Name>
+      <HintPath>lib\OutSystems.Plugin.SAP.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Structures\STBAPIRET2Structure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STCostcenterlistStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STExtensioninStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CcSAPConnectionPRD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CcSAPConnectionPRD\Zrfcsd001.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CcSAPConnectionPRD\Bapi_Costcenter_Getlist1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

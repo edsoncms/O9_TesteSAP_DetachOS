@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProductVersion>9.0.21022</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{F3BEB653-9E30-4E65-A8BB-3192461CBF8D}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<RootNamespace>ssTeste_SAP</RootNamespace>
+		<AssemblyName>Teste_SAPReferencesProxy</AssemblyName>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>bin\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<DebugSymbols>true</DebugSymbols>
+		<Optimize>false</Optimize>
+		<WarningLevel>1</WarningLevel>
+		<DebugType>full</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+		<GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>bin\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugSymbols>false</DebugSymbols>
+		<Optimize>true</Optimize>
+		<WarningLevel>1</WarningLevel>
+		<DebugType>none</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+		<GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System">
+			<Name>System</Name>
+		</Reference>
+		<Reference Include="System.Core">
+			<Name>System.Core</Name>
+		</Reference>
+        <Reference Include="System.Drawing">
+			<Name>System.Drawing</Name>
+		</Reference>
+		<Reference Include="System.Data">
+			<Name>System.Data</Name>
+		</Reference>
+		<Reference Include="System.Web">
+			<Name>System.Web</Name>
+		</Reference>
+		<Reference Include="System.Web.Services">
+			<Name>System.Web.Services</Name>
+		</Reference>
+		<Reference Include="System.Xml">
+			<Name>System.XML</Name>
+		</Reference>
+
+        
+        <ProjectReference Include="..\..\OutSystems.RuntimeCommon\OutSystems.RuntimeCommon.csproj">
+            <Project>{A99F44D3-9D76-4AA1-A833-BA2D283AD22E}</Project>
+            <Name>OutSystems.RuntimeCommon</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\RuntimePlatform\RuntimePlatform.csproj">
+            <Project>{EFB0D1E3-076D-4F16-A595-B33BFC5B3F18}</Project>
+            <Name>RuntimePlatform</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\SMSInterface\SMSInterface.csproj">
+            <Project>{66D6B91F-CCF4-495D-89FD-0290CBC9D06E}</Project>
+            <Name>SMSInterface</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\WebWidgets\WebWidgets.csproj">
+            <Project>{0F14B756-1F80-421A-9837-79B64857331C}</Project>
+            <Name>WebWidgets</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\WidgetsRuntimeAPI\WidgetsRuntimeAPI.csproj">
+            <Project>{F686984C-5ABE-4529-9AE1-4BBF1EA7F93E}</Project>
+            <Name>WidgetsRuntimeAPI</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\PluginWidgets\OutSystems.Plugin.Widgets.Runtime.csproj">
+            <Project>{E1542247-C244-4EC3-99F1-F39717106886}</Project>
+            <Name>OutSystems.Plugin.Widgets.Runtime</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\DatabaseAbstractionLayer\DatabaseAbstractionLayer.csproj">
+            <Project>{E451FEC9-2B6B-45A2-8AB9-57196F4557E8}</Project>
+            <Name>DatabaseAbstractionLayer</Name>
+        </ProjectReference>
+        
+        
+    <Reference Include="OutSystems.NssPlatformPasswordUtils.dll">
+      <Name>OutSystems.NssPlatformPasswordUtils.dll</Name>
+      <HintPath>..\bin\OutSystems.NssPlatformPasswordUtils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+        <Reference Include="Charts.dll">
+      <Name>Charts.dll</Name>
+      <HintPath>..\bin\Charts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+        <Reference Include="Users.dll">
+      <Name>Users.dll</Name>
+      <HintPath>..\bin\Users.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+        <Reference Include="RichWidgets.dll">
+      <Name>RichWidgets.dll</Name>
+      <HintPath>..\bin\RichWidgets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    
+    </ItemGroup>
+	<ItemGroup>
+	  <Compile Include="Extension_PlatformPasswordUtils_proxy.cs">
+      <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Include="eSpace_Charts_proxy.cs">
+      <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Include="eSpace_Users_proxy.cs">
+      <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Include="eSpace_RichWidgets_proxy.cs">
+      <SubType>Code</SubType>
+	  </Compile>
+
+	</ItemGroup>
+	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

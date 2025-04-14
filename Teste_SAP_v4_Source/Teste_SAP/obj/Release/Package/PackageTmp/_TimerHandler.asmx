@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="c#" Codebehind="TimerHandler.asmx.cs" Class="ssTeste_SAP.TimerHandler" %>

@@ -1,0 +1,17 @@
+﻿<%@ Page Language="c#" Codebehind="InvalidPermissions.aspx.cs" AutoEventWireup="false" Inherits="ssTeste_SAP.Flows.FlowCommon.ScrnInvalidPermissions" %><%@ Register TagPrefix="osweb" Namespace="OutSystems.HubEdition.WebWidgets" Assembly="OutSystems.HubEdition.WebWidgets" %><%@ Assembly Name="OutSystems.WidgetsRuntimeAPI" %><%@ Import namespace="ssTeste_SAP" %><%@ Import namespace="OutSystems.HubEdition.RuntimePlatform" %><%@ Register TagPrefix="RichWidgets_widgets" TagName="KH_KQJACwvEqFcQnMKeaEzA" Src="Blocks\Teste_SAP\Layouts\Layout_London.ascx" %><%@ Register TagPrefix="widgets" TagName="KgGqVjlDuvkKTxk7naaerTA" Src="Blocks\Teste_SAP\Common\Header.ascx" %><%@ Register TagPrefix="widgets" TagName="Ke77LnY3GBfWtQXGOyBElgw" Src="Blocks\Teste_SAP\Common\Menu.ascx" %><%@ Register TagPrefix="widgets" TagName="KRB2mbz7DZROG8vWnVIJNgw" Src="Blocks\Teste_SAP\Common\Footer.ascx" %><%@ Register TagPrefix="RichWidgets_widgets" TagName="K_FfkSihEWEaXXqx0SqyrPQ" Src="Blocks\Teste_SAP\RichWidgets\RemovePopups.ascx" %>
+<%= Teste_SAP_Properties.DocType %>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head runat="server"><%= GetHeadTopJavaScript() %>
+	<title><%= HttpUtility.HtmlEncode (Title) %></title>
+    <meta http-equiv="Content-Type" content="<%= "text/html; charset=" + Response.ContentEncoding.WebName %>" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<%= "\n" + GetStyleSheetIncludes() %><%= GetRequestInfoJavaScript() + GetJavaScriptIncludes() + GetHeadBottomJavaScript() %>
+  </head>
+  <osweb:Body runat="server"><%= GetBodyTopJavaScript() %>
+    <osweb:Form id="WebForm1" method="post"  action="<%# GetFormAction() %>" runat="server">
+<RichWidgets_widgets:KH_KQJACwvEqFcQnMKeaEzA runat="server" id="RichWidgets_wt_WebBlockInstance5" OnEvaluateParameters="RichWidgets_webBlck_WebBlockInstance5_onDataBinding" InstanceID="_WebBlockInstance5"><phHeader><widgets:KgGqVjlDuvkKTxk7naaerTA runat="server" id="wt_WebBlockInstance10" OnEvaluateParameters="webBlck_WebBlockInstance10_onDataBinding" InstanceID="_WebBlockInstance10"></widgets:KgGqVjlDuvkKTxk7naaerTA></phHeader><phMenu><widgets:Ke77LnY3GBfWtQXGOyBElgw runat="server" id="wt_WebBlockInstance1" OnEvaluateParameters="webBlck_WebBlockInstance1_onDataBinding" InstanceID="_WebBlockInstance1"></widgets:Ke77LnY3GBfWtQXGOyBElgw></phMenu><phTitle><osweb:PlaceHolder runat="server"><%# "Invalid Permissions" %></osweb:PlaceHolder></phTitle><phActions></phActions><phMainContent><osweb:PlaceHolder runat="server"><%# "You don&#39;t have permissions to view the required screen. Please contact the system administrator." %></osweb:PlaceHolder></phMainContent><phFooter><widgets:KRB2mbz7DZROG8vWnVIJNgw runat="server" id="wt_WebBlockInstance11" OnEvaluateParameters="webBlck_WebBlockInstance11_onDataBinding" InstanceID="_WebBlockInstance11"></widgets:KRB2mbz7DZROG8vWnVIJNgw></phFooter></RichWidgets_widgets:KH_KQJACwvEqFcQnMKeaEzA><RichWidgets_widgets:K_FfkSihEWEaXXqx0SqyrPQ runat="server" id="RichWidgets_wt_WebBlockInstance9" OnEvaluateParameters="RichWidgets_webBlck_WebBlockInstance9_onDataBinding" InstanceID="_WebBlockInstance9"></RichWidgets_widgets:K_FfkSihEWEaXXqx0SqyrPQ><osweb:DummySubmitLink runat="server" id="Dummy_Submit_Link"/>
+    <%= OutSystems.HubEdition.RuntimePlatform.AppInfo.GetAppInfo().GetWatermark() %><%= GetCallbackDebug()	
+%><%= GetVisitCode() %></osweb:Form><%= GetEndPageJavaScript() + GetBodyBottomJavaScript() %>
+  </osweb:Body>
+</html>

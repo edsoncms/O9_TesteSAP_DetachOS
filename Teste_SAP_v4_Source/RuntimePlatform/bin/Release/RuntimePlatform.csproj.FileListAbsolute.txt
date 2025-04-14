@@ -1,0 +1,16 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\RuntimePlatform.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.RuntimePlatform.Debugger.resources
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\RuntimePlatform.csproj.GenerateResource.Cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.RuntimePlatform.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.RuntimePlatform.XML
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.RuntimePlatform.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\GemBox.Spreadsheet.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.SMS.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.RuntimeCommon.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.RuntimeCommon.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.xml
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\OutSystems.HubEdition.SMS.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\RuntimePlatform\bin\Release\GemBox.Spreadsheet.xml

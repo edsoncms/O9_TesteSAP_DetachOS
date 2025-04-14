@@ -1,0 +1,5 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\PluginWidgets\bin\Release\OutSystems.Plugin.Widgets.Runtime.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\PluginWidgets\bin\Release\OutSystems.Plugin.Widgets.Runtime.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\PluginWidgets\obj\Release\OutSystems.Plugin.Widgets.Runtime.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\PluginWidgets\obj\Release\OutSystems.Plugin.Widgets.Runtime.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\PluginWidgets\obj\Release\OutSystems.Plugin.Widgets.Runtime.pdb

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="c#" Codebehind="_ActivityActionsHandler.asmx.cs" Class="ssTeste_SAP.Processes.Handling.ActivityActionsHandler" %>

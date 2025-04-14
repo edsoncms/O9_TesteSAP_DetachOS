@@ -1,0 +1,7 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\bin\Release\OutSystems.RuntimeCommon.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\bin\Release\OutSystems.RuntimeCommon.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\obj\Release\OutSystems.RuntimeCommon.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\obj\Release\OutSystems.RuntimeCommon.LabelingResources.resources
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\obj\Release\OutSystems.RuntimeCommon.csproj.GenerateResource.Cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\obj\Release\OutSystems.RuntimeCommon.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\OutSystems.RuntimeCommon\obj\Release\OutSystems.RuntimeCommon.pdb

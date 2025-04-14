@@ -1,0 +1,1268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD3096B6-9D30-4623-AA05-E93CB56CEF09}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ssTeste_SAP</RootNamespace>
+    <AssemblyName>Teste_SAP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GemBox.Spreadsheet, Version=45.0.35.1010, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.45.0.0.1010\lib\net35\GemBox.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.SQLServerDatabaseProvider">
+      <HintPath>..\SQLServerDatabaseProvider\OutSystems.HubEdition.SQLServerDatabaseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.OracleDatabaseProvider">
+      <HintPath>..\OracleDatabaseProvider\OutSystems.HubEdition.OracleDatabaseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.MySQLDatabaseProvider">
+      <HintPath>..\MySQLDatabaseProvider\OutSystems.HubEdition.MySQLDatabaseProvider.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\OutSystems.RuntimeCommon\OutSystems.RuntimeCommon.csproj">
+      <Project>{A99F44D3-9D76-4AA1-A833-BA2D283AD22E}</Project>
+      <Name>OutSystems.RuntimeCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RuntimePlatform\RuntimePlatform.csproj">
+      <Project>{EFB0D1E3-076D-4F16-A595-B33BFC5B3F18}</Project>
+      <Name>RuntimePlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMSInterface\SMSInterface.csproj">
+      <Project>{66D6B91F-CCF4-495D-89FD-0290CBC9D06E}</Project>
+      <Name>SMSInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebWidgets\WebWidgets.csproj">
+      <Project>{0F14B756-1F80-421A-9837-79B64857331C}</Project>
+      <Name>WebWidgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WidgetsRuntimeAPI\WidgetsRuntimeAPI.csproj">
+      <Project>{F686984C-5ABE-4529-9AE1-4BBF1EA7F93E}</Project>
+      <Name>WidgetsRuntimeAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginWidgets\OutSystems.Plugin.Widgets.Runtime.csproj">
+      <Project>{E1542247-C244-4EC3-99F1-F39717106886}</Project>
+      <Name>OutSystems.Plugin.Widgets.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseAbstractionLayer\DatabaseAbstractionLayer.csproj">
+      <Project>{E451FEC9-2B6B-45A2-8AB9-57196F4557E8}</Project>
+      <Name>DatabaseAbstractionLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="referencesProxy\Teste_SAPReferencesProxy.csproj">
+      <Name>Teste_SAPReferencesProxy</Name>
+      <Project>{F3BEB653-9E30-4E65-A8BB-3192461CBF8D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="CustomClients\JsonplaceholderTypicode\Teste_SAP.JsonplaceholderTypicode.csproj">
+      <Name>Teste_SAP.CcJsonplaceholderTypicode</Name>
+      <Project>{49FD479B-453D-6EA0-41E5-EC14DB5EFB35}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="CustomClients\SAPConnectionPRD\Teste_SAP.SAPConnectionPRD.csproj">
+      <Name>Teste_SAP.CcSAPConnectionPRD</Name>
+      <Project>{EB90915D-C865-2382-FDBA-F12AA99CBBA7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blocks\Charts\Utils\JavaScript_Content.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\HighCharts.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\HighCharts.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\HighCharts.nl-NL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\HighCharts.pt-PT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\OSHighCharts.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\OSHighCharts.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\OSHighCharts.nl-NL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\ChartLibrariesJS\OSHighCharts.pt-PT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryComponents.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUILoader.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUICompatibility.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryUIInternal.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\AllowAddToIOSHome.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_Message.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\NotifyWidget.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Private\RichWidgetsjQueryUI.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\ResponsiveTableRecords.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\Feedback_AjaxWait.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\MenuSlider.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\Internal\BarColumnChart_HighCharts.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\Internal\LineAreaChart_HighCharts.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Charts\Internal\PieChart_HighCharts.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Users\UserManagement\ChangePassword.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Users\UserManagement\EditMyInfo.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\Layouts\Layout_London.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\jQueryUI\jQueryCookie.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.ar.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.en.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.es.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.is-IS.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.ja-JP.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.lt-LT.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.nl.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.pl-PL.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.pt-BR.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.pt.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\RichWidgets\RichWidgets\RemovePopups.zh-CN.js">
+      <SubType>Component</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WebReferences\SAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Theme.Teste_SAP.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Theme.Teste_SAP.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="ThemeTeste_SAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="ReferenceTheme.SanFrancisco.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.SanFrancisco.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Chicago.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Chicago.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Detroit.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Detroit.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Greenwich.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.Greenwich.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.LondonFixed.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.LondonFixed.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.London.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.London.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.LondonFluid.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ReferenceTheme.LondonFluid.extra.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="_WebErrorPage.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="SmsErrorPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="iSmsHandler.asmx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="iSmsHandler.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>iSmsHandler.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="iSmsHandlerClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iSmsNotificationHandlerClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmsClasses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_download.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_download.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>_download.aspx</DependentUpon>
+    </Compile>
+    <Content Include="_osjs.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Exceptions\UserException1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\NotTeste_SAPUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionOnSessionStart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionOnBeginWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionGenerateSaltedMD5Hash.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionYAxisFormat_Init.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionDataPoint_Init.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionChartFormat_Init.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionXAxisFormat_Init.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionDataPoint_GetClicked.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionAdvancedFormat_Init.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionUser_Logout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionUser_GetUnifiedLoginUrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionUser_Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionDate_MonthName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_SortColumn_SetOrderBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionInput_FocusFirstInvalid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_Move_Down.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_SortColumn_GetOrderBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionDateTime_PrettyFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionFormatAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_Navigation_GetStartIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionPopup_Upload_GetFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionPopup_Editor_Close.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_BulkSelectToggleEnabled.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionGetApplicationName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionInput_AutoComplete_GetIdentifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionFeedback_Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_Navigation_ResetStartIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionList_Move_Up.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionDate_PrettyFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionPopup_Editor_Notify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionMenu_GetStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionInput_AutoComplete_ShowList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Roles\ssTeste_SAPUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExtendedActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENMenuSubItemEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENMenuItemEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENUserEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENXAxisValuesTypeEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENLegendPositionEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENStackingTypeEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENIconNameEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENIconSizeEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ENMessageTypeEntityRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STUnitsofmeasureStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STSalesdataStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STClientdataStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STMaterialdescriptionStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STAdvancedDataSeriesFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STXAxisFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STAdvancedDataPointFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STAdvancedFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STYAxisFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STDataPointStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STChartFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STBooleanStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STUploadedFileStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures\STInput_AutoComplete_ListEntryStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Records.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordLists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CcJsonplaceholderTypicodeCallbacks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CcSAPConnectionPRDCallbacks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_SmsHandler.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_SmsHandler.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>_SmsHandler.aspx</DependentUpon>
+    </Compile>
+    <Content Include="_delivery.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_delivery.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>_delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Common_WebExternalSite1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Login.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Login.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Content Include="NoPermission.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="NoPermission.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>NoPermission.aspx</DependentUpon>
+    </Compile>
+    <Content Include="Blocks\Teste_SAP\Common\LoginInfo.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Common\LoginInfo_precache.manifest">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Blocks\Teste_SAP\Common\LoginInfo.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>LoginInfo.ascx</DependentUpon>
+    </Compile>
+    <Content Include="Blocks\Teste_SAP\Common\Footer.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Common\Footer_precache.manifest">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Blocks\Teste_SAP\Common\Footer.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Content Include="InternalError.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="InternalError.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InternalError.aspx</DependentUpon>
+    </Compile>
+    <Content Include="Blocks\Teste_SAP\Common\Header.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Common\Header_precache.manifest">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Blocks\Teste_SAP\Common\Header.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Content Include="Blocks\Teste_SAP\Common\Menu.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Common\Menu_precache.manifest">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Blocks\Teste_SAP\Common\Menu.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Content Include="InvalidPermissions.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="InvalidPermissions.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InvalidPermissions.aspx</DependentUpon>
+    </Compile>
+    <Content Include="MyInfo.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="MyInfo.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>MyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlowCommon.ExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_Default.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Home.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Home.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Content Include="HomePage.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="HomePage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlowMainFlow.ExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Images.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_image.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_image.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>_image.aspx</DependentUpon>
+    </Compile>
+    <Content Include="_Basic.css">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Properties\Teste_SAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_ping.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="_ping.html">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="_status.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="_preloader.js">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="AbstractProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AbstractProcessActivity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_ActivityHandler.asmx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_ActivityHandler.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>_ActivityHandler.asmx</DependentUpon>
+    </Compile>
+    <Content Include="_TimerHandler.asmx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="_TimerHandler.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>_TimerHandler.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="_RunningInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_debugger.asmx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="TypeFactory\RCYAxisFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STYAxisFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCDataPointRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STDataPointStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCChartFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STChartFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCXAxisFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STXAxisFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RLAdvancedDataPointFormatRecordList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCAdvancedDataPointFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STAdvancedDataPointFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RLAdvancedDataSeriesFormatRecordList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCAdvancedDataSeriesFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STAdvancedDataSeriesFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCAdvancedFormatRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STAdvancedFormatStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RLDataPointRecordList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCUploadedFileRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STUploadedFileStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RLInput_AutoComplete_ListEntryRecordList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\RCInput_AutoComplete_ListEntryRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory\STInput_AutoComplete_ListEntryStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENXAxisValuesTypeEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENLegendPositionEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENStackingTypeEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENIconNameEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENIconSizeEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeFactory.ENMessageTypeEntityRecordTypeFactoryImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Teste_SAPLanguage.resources">
+      <SubType>Component</SubType>
+      <LogicalName>Teste_SAPLanguage.resources</LogicalName>
+    </EmbeddedResource>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Content Include="Web.config">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="_CallbackInformation.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="DefaultValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="_FirstLoadImprovementsScreen.aspx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Charts\AreaChart.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Charts\ColumnChart.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Charts\BarChart.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Charts\LineChart.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Charts\PieChart.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\UserManagement\ChangePassword.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\UserManagement\EditMyInfo.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Layouts\Layout_Chicago.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\Layouts\Layout_London.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Feedback_Message.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\List_Navigation.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Icon.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\ApplicationSwitcher.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Input_SetFocus.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\List_SortColumn.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Input_AutoComplete.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\RemovePopups.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Feedback_AjaxWait.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\List_BulkSelect.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Popup_InfoBalloon.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\List_Counter.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Tabs_ClientSide.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\DropDownMenu.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\List_Move.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Popup_Editor.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Input_Calendar.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\RichWidgets\Container_ExpandCollapse.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\LayoutsOther\Layout_Popup.ascx">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Blocks\Teste_SAP\LayoutsOther\Layout_Email.ascx">
+      <SubType>Component</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Teste_SAP.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51014/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,8 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.XML
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\bin\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\bin\Release\OutSystems.RuntimeCommon.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\bin\Release\OutSystems.RuntimeCommon.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\obj\Release\DatabaseAbstractionLayer.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\obj\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\DatabaseAbstractionLayer\obj\Release\OutSystems.HubEdition.DatabaseAbstractionLayer.pdb

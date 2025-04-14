@@ -1,0 +1,5 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\Teste_SAP\bin\Teste_SAP.CcJsonplaceholderTypicode.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\Teste_SAP\bin\Teste_SAP.CcJsonplaceholderTypicode.pdb
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\Teste_SAP\CustomClients\JsonplaceholderTypicode\obj\Debug\Teste_SAP.JsonplaceholderTypicode.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\Teste_SAP\CustomClients\JsonplaceholderTypicode\obj\Debug\Teste_SAP.CcJsonplaceholderTypicode.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\Teste_SAP\CustomClients\JsonplaceholderTypicode\obj\Debug\Teste_SAP.CcJsonplaceholderTypicode.pdb

@@ -1,0 +1,3 @@
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\SMSInterface\bin\Debug\SMSInterface.csprojResolveAssemblyReference.cache
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\SMSInterface\bin\Debug\OutSystems.HubEdition.SMS.dll
+C:\opt\OutSystems\Detach\Workspace\Source\Teste_SAP\Teste_SAP_v4_Source\SMSInterface\bin\Debug\OutSystems.HubEdition.SMS.pdb

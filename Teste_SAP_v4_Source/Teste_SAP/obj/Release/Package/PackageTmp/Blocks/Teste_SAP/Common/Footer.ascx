@@ -1,0 +1,5 @@
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="Blocks\Teste_SAP\Common\Footer.ascx.cs" Inherits="ssTeste_SAP.Flows.FlowCommon.WBlkFooter,Teste_SAP" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+<%@ Register TagPrefix="osweb" Namespace="OutSystems.HubEdition.WebWidgets" Assembly="OutSystems.HubEdition.WebWidgets" %>
+<%@ Assembly Name="OutSystems.WidgetsRuntimeAPI" %>
+<%@ Import namespace="ssTeste_SAP" %>
+<%# PageStartHook() %><osweb:Container runat="server" id="wt_Container3" anonymous="true" onDataBinding="cnt_Container3_onDataBinding"><osweb:PlaceHolder runat="server"><%# "Built with " %></osweb:PlaceHolder><osweb:HyperLink runat="server" id="wt_Link2" Visible="<%# lnk_Link2_isVisible() %>" Enabled="<%# lnk_Link2_isEnabled() %>" NavigateUrl="<%# lnk_Link2_NavigateUrl() %>" title="<%# lnk_Link2_getTitle() %>" alt="<%# lnk_Link2_getTitle() %>"><osweb:PlaceHolder runat="server"><%# "OutSystems Platform" %></osweb:PlaceHolder></osweb:HyperLink></osweb:Container><%# PageEndHook() %>
